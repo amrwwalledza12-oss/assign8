@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's For Dinner</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="css/all.min.css">
+<!-- Google Font: Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="https://www.spoonforkbacon.com/wp-content/uploads/2021/02/dinner-recipes.jpg" type="image/x-icon">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <span class="logo-icon"><i class="fa-solid fa-utensils"></i></span>
+      <span class="brand-text">What's For Dinner<small>Your daily meal inspiration</small></span>
+    </a>
+    <div class="nav-icons">
+      <a href="#" class="nav-icon-btn" title="Saved"><i class="fa-regular fa-bookmark"></i></a>
+      <a href="#" class="nav-icon-btn" title="History"><i class="fa-solid fa-clock-rotate-left"></i></a>
+      <a href="#" class="nav-icon-btn" title="Settings"><i class="fa-solid fa-gear"></i></a>
+      <a href="#" class="nav-icon-btn profile" title="Profile"><i class="fa-solid fa-user"></i></a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- MAIN RECIPE CARD -->
+  <div class="recipe-card">
+    <div class="row g-0">
+      <div class="col-md-5 recipe-image" id="recipeImage">
+        <img id="recipeImageTag" src="" alt="Recipe Image" class="main-img">
+        <div class="rating-badge"><i class="fa-solid fa-star"></i><span id="ratingText">4.8 (234 reviews)</span></div>
+        <div class="info-overlay">
+          <div class="item">
+            <i class="fa-regular fa-clock"></i>
+            <span class="lbl">Prep Time</span>
+            <span class="val" id="prepTime">15 min</span>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-fire-burner"></i>
+            <span class="lbl">Cook Time</span>
+            <span class="val" id="cookTime">20 min</span>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-users"></i>
+            <span class="lbl">Servings</span>
+            <span class="val" id="servings">4 people</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-7 recipe-details">
+        <div>
+          <span class="badge-pill badge-diff" id="diffBadge">Easy</span>
+          <span class="badge-pill badge-cuisine" id="cuisineBadge">Italian</span>
+        </div>
+        <h2 id="recipeTitle">Creamy Spaghetti Carbonara</h2>
+        <p class="desc" id="recipeDesc">A classic Italian pasta dish with eggs, cheese, and pancetta</p>
+
+        <div class="warning-box" id="warningBox">
+          <div class="w-title"><i class="fa-solid fa-triangle-exclamation"></i> Extended Preparation Time</div>
+          <div class="w-text">This recipe requires more than 45 minutes to prepare. Plan accordingly!</div>
+        </div>
+
+        <div class="tab-row">
+          <button class="tab-btn active" data-tab="ingredients"><i class="fa-solid fa-list-ul"></i> Ingredients</button>
+          <button class="tab-btn" data-tab="instructions"><i class="fa-solid fa-book-open"></i> Instructions</button>
+          <button class="tab-btn" data-tab="nutrition"><i class="fa-solid fa-chart-pie"></i> Nutrition</button>
+          <button class="tab-btn" data-tab="tips"><i class="fa-solid fa-lightbulb"></i> Chef's Tips</button>
+        </div>
+
+        <div class="tab-panel active" id="panel-ingredients"></div>
+        <div class="tab-panel" id="panel-instructions"></div>
+        <div class="tab-panel" id="panel-nutrition"></div>
+        <div class="tab-panel" id="panel-tips"></div>
+
+        <button class="try-btn" id="tryAnotherBtn">
+          <i class="fa-solid fa-rotate"></i> Try Another Recipe
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEAL GRID -->
+  <div class="section-title">
+    <h3>All Recipes</h3>
+    <span>Tap a recipe to view it</span>
+  </div>
+  <div class="meal-grid" id="mealGrid"></div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+</body>
+</html>
